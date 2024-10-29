@@ -1,0 +1,24 @@
+
+#include <iostream>
+#include <string>
+
+int main()
+{
+double kanta, korkeus;
+
+std::cout << "Anna suorakulmion kanta: ";
+
+std::cin >> kanta;
+
+std::cout << "Anna suorakulmion korkeus: ";
+std::cin >> korkeus;
+
+double piiri = 2 * (kanta + korkeus);
+double pinta_ala = kanta * korkeus;
+
+std::cout << "Suorakulmion piiri on: " << piiri << std::endl;
+std::cout << "Suorakulmion pintala on: " << pinta_ala << std::endl;
+
+
+return 0;
+}
