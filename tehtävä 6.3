@@ -1,0 +1,29 @@
+
+#include <iostream>
+using namespace std;
+
+double gallonaLasku(double x) {
+    return x * 3.785;
+}
+
+int main() {
+    double gal;
+    
+    cout << "Anna bensan maara nestegallonoina: ";
+    
+    cin >> gal;
+    
+    while (gal >0) {
+    
+        double tulos = gallonaLasku(gal);
+        
+        cout << "Maara gallonoita on: " << tulos << " litraa" << endl;
+        cout << "Anna bensan maara nestegallonoina: ";
+        
+        cin >> gal;
+    
+    }
+    
+    return 0;
+
+}
