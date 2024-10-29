@@ -1,0 +1,27 @@
+#include <iostream>
+#include <iomanip>
+int main() {
+    
+    
+    double tuuma;
+    
+    std::cout << "Annettu Tuuma: ";
+    std::cin >> tuuma;
+
+
+
+    while (tuuma >= 0) {
+        
+        
+        double tuuma_cm = tuuma * 2.54;
+        
+        std::cout << "Tuumat senttimetreina: "<<std::fixed << std::setprecision(2) <<tuuma_cm << " cm " <<std::endl;
+        std::cout << "Annettu Tuuma: ";
+        std::cin >> tuuma;
+    }
+
+
+    std::cout << "Lopetit ohjelman." << std::endl;
+   return 0;
+}
+
