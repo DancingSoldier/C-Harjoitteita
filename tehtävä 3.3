@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+
+int main() {
+
+    std::string txt;
+    std::cout << "Anna biologinen sukupuolesi (MIES/NAINEN): ";
+    std::getline(std::cin, txt);
+
+
+    for (auto &c : txt) {
+        c = toupper(c);
+    }
+
+
+    if (txt == "MIES") {
+        std::cout << "Vastasit MIES" << std::endl;
+    } else if (txt == "NAINEN") {
+        std::cout << "Vastasit NAINEN" << std::endl;
+    }
+
+
+    double hemo;
+    std::cout << "Anna hemoglobiiniarvosi (g/l): ";
+    std::cin >> hemo;
+
+
+    if (txt == "MIES") {
+        if (hemo <= 134.0) {
+            std::cout << "Ali normaalin." << std::endl;
+        } else if (hemo >= 195.0) {
+            std::cout << "Yli normaalin." << std::endl;
+        } else {
+            std::cout << "Normaali taso." << std::endl;
+        }
+    } else if (txt == "NAINEN") {
+        if (hemo <= 117.0) {
+            std::cout << "Ali normaalin." << std::endl;
+        } else if (hemo >= 175.0) {
+            std::cout << "Yli normaalin." << std::endl;
+        } else {
+            std::cout << "Normaali taso." << std::endl;
+        }
+    }
+
+    return 0;
+}
+
