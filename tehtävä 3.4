@@ -1,0 +1,27 @@
+#include <iostream>
+
+int main() {
+    int num;
+    std::cout << "Kirjoita vuosi jonka haluat tarkastaa: ";
+    std::cin >> num;
+
+
+    std::string ei = "Vuosi ei ole karkausvuosi.";
+    std::string on = "Vuosi on karkausvuosi.";
+
+    // Tarkistetaan karkausvuosi ehdot
+    if (num % 4 == 0 && num % 100 == 0 && num % 400 == 0) { // Jaollinen 100 ja 400
+        std::cout << on << std::endl;
+    } 
+    else if (num % 4 == 0 && num % 100 == 0 && num % 400 != 0) { // Jaollinen 100 mutta ei 400
+        std::cout << ei << std::endl;
+    } 
+    else if (num % 4 == 0 && num % 100 != 0) { // Jaollinen 4 mutta ei 100
+        std::cout << on << std::endl;
+    } 
+    else if (num % 4 != 0) { // Ei jaollinen 4
+        std::cout << ei << std::endl;
+    }
+
+    return 0;
+}
